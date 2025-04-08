@@ -7,10 +7,10 @@ Build Data Pipeline Using Pyspark
 ## Content
 [1. Overview](#1-overview)  
 [2. Source of Dataset](#2-source-of-dataset)   
-[3. Problem Overview](#4-requirements-gathering)  
-[4. Solution Approach](#5-source-to-target-mapping)  
-[5. Validation Rule](#6-validation-rule)  
-[6. How to Use This Project](#7-how-to-use-this-project)
+[3. Problem Overview](#3-problem-overview)  
+[4. Solution Approach](#4-solution-approach)  
+[5. Data Transformation Rule](#5-data-transformation-rule)  
+[6. How to Use This Project](#6-how-to-use-this-project)
    - [Preparations](#71-preparations)
    - [Running the Pipeline](#72-running-the-pipeline)
 
@@ -63,5 +63,79 @@ A systematic ETL process ensures reliable and scalable data transformation and l
 
 This ETL framework enables efficient data integration, ensuring high-quality, analysis-ready datasets.
 
+# 5. Data Transformation Rule
+
+The transformation phase is handled using a series of PySpark scripts, each focusing on specific data preprocessing tasks to prepare the datasets for loading into the data warehouse.
+
+---
+
+### 1. Data Type Conversion
+
+Ensures columns are cast to their correct data types.
+
+**Examples:**
+- Converts `balance` from a string with currency symbols to an integer.
+- Parses `transaction_amount` and `account_balance` as doubles.
+- Derives `duration_in_year` by converting `duration` from days to years (rounded).
+
+---
+
+### 2. Data Cleaning
+
+Standardizes and cleans values across datasets.
+
+**Examples:**
+- In the Customers table, normalizes `customer_gender` values:
+  - `M` → `Male`
+  - `F` → `Female`
+  - Others → `Other`
+- Trims whitespace and applies lowercase formatting for consistency.
+
+---
+### 3. Date and Time Formatting
+
+Applies uniform formatting to date and time fields.
+
+**Examples:**
+- Converts `transaction_date` from `d/M/yy` to `YYYY/MM/DD`.
+- Formats `transaction_time` from `HHMMSS` to `HH:MM:SS`.
+- Adjusts `CustomerDOB` to include century:
+  - Year > 25 → prefixed with `19`
+  - Year ≤ 25 → prefixed with `20`
+
+---
+
+### 4. Column Renaming
+
+Aligns column names to a consistent naming convention across tables.
+
+**Examples:**
+
+**Customers Table:**
+- `CustomerID` → `customer_id`
+- `CustomerDOB` → `birth_date`
+- `CustGender` → `gender`
+
+**Transactions Table:**
+- `TransactionID` → `transaction_id`
+- `TransactionDate` → `transaction_date`
+
+**Marketing Table:**
+- `pdays` → `days_since_last_campaign`
+- `previous` → `previous_campaign_contacts`
+
+---
+
+### 5. Column Selection
+
+Filters the dataset to retain only relevant fields for analysis.
+
+**Examples:**
+
+**Customers Table:**
+- `customer_id`, `birth_date`, `gender`, `location`, `account_balance`
+
+**Transactions Table:**
+- `transaction_id`, `customer_id`, `transaction_date`, `transaction_time`, `transaction_amount`
 
 
