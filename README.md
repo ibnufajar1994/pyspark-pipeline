@@ -6,13 +6,16 @@ Build Data Pipeline Using Pyspark
 
 ## Content
 [1. Overview](#1-overview)  
-[2. Source of Dataset](#2-source-of-dataset)   
+[2. Source of Dataset](#2-source-of-dataset)  
 [3. Problem Overview](#3-problem-overview)  
 [4. Solution Approach](#4-solution-approach)  
 [5. Data Transformation Rule](#5-data-transformation-rule)  
-[6. How to Use This Project](#6-how-to-use-this-project)
-   - [Preparations](#71-preparations)
-   - [Running the Pipeline](#72-running-the-pipeline)
+[6. Data Pipeline Design](#6-data-pipeline-design)  
+[7. How to Use This Repository](#7-how-to-use-this-repository)  
+   - [Preparations](#preparations)  
+   - [Running the Project](#running-the-project)  
+   - [Access the Jupyter Notebook](#access-the-jupyter-notebook)
+     
 
 # 1. Overview
 This repository showcases a project that demonstrates a data pipeline using the ETL method with PySpark to process various data sources. It includes logging features to capture all events within the pipeline. Additionally, it provides a detailed overview of the data pipeline, including data sources, storage destinations, requirement analysis, proposed solutions, and the final pipeline design.
@@ -138,4 +141,35 @@ Filters the dataset to retain only relevant fields for analysis.
 **Transactions Table:**
 - `transaction_id`, `customer_id`, `transaction_date`, `transaction_time`, `transaction_amount`
 
+# 6. Data Pipeline Design
+**Data Profiling**
+
+![Tanpa judul (681 x 244 piksel)](https://github.com/user-attachments/assets/81c1e66e-375e-4032-99e7-22c0bb9f4f00)
+
+**ETL Pipeline**
+
+![Tanpa judul (681 x 244 piksel) (1)](https://github.com/user-attachments/assets/d6a17cee-14b9-4999-a4c4-72c3cca83acc)
+
+
+# 7. How to Use This Repository
+## Preparations
+**Clone the repository:**
+   ```bash
+   git clone https://github.com/ibnufajar1994/data-pipeline.git
+   ```
+## Running the project  
+   ```bash
+   docker compose build --no-cache
+   docker compose up -d
+   ```
+## Access the Jupyter Notebook
+look up the logs for pyspark container
+   ```bash
+  docker logs pyspark_container
+   ```
+get the token of the jupyternotebook, for example:
+   ```bash
+http://127.0.0.1:8888/lab?token=3fa3b1cf2c67643874054971f23ee59bdee283b373794847
+   ```
+copy and paste the token into your browser
 
