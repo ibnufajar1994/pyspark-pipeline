@@ -198,5 +198,7 @@ get the token of the jupyternotebook, for example:
    ```bash
 http://127.0.0.1:8888/lab?token=3fa3b1cf2c67643874054971f23ee59bdee283b373794847
    ```
-copy and paste the token into your browser
-
+copy and paste the token into your browser, open new terminal and run command:
+```bash
+python main.py
+```
