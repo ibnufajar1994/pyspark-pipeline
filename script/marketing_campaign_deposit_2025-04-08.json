@@ -1,0 +1,100 @@
+{
+    "created_at": "2025-04-08",
+    "report": {
+        "loan_data_id": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0
+        },
+        "age": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0,
+            "Total Negative Values": 0
+        },
+        "job": {
+            "data_type": "StringType()",
+            "unique_value": [
+                "management",
+                "retired",
+                "unknown",
+                "self-employed",
+                "student",
+                "blue-collar",
+                "entrepreneur",
+                "admin.",
+                "technician",
+                "services",
+                "housemaid",
+                "unemployed"
+            ],
+            "percentage_missing_value": 0.0
+        },
+        "marital_id": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0
+        },
+        "education_id": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0
+        },
+        "default": {
+            "data_type": "BooleanType()"
+        },
+        "balance": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.0,
+            "Total Negative Values": 3766
+        },
+        "housing": {
+            "data_type": "BooleanType()"
+        },
+        "loan": {
+            "data_type": "BooleanType()"
+        },
+        "contact": {
+            "data_type": "StringType()",
+            "unique_value": [
+                "unknown",
+                "cellular",
+                "telephone"
+            ],
+            "percentage_missing_value": 0.0
+        },
+        "day": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0
+        },
+        "month": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.0
+        },
+        "duration": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0
+        },
+        "campaign": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0
+        },
+        "pdays": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0
+        },
+        "previous": {
+            "data_type": "IntegerType()",
+            "percentage_missing_value": 0.0
+        },
+        "poutcome": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.0
+        },
+        "subscribed_deposit": {
+            "data_type": "BooleanType()"
+        },
+        "created_at": {
+            "data_type": "TimestampType()"
+        },
+        "updated_at": {
+            "data_type": "TimestampType()"
+        }
+    }
+}

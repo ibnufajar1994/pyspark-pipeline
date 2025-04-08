@@ -1,0 +1,51 @@
+{
+    "created_at": "2025-04-08",
+    "report": {
+        "TransactionID": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.0
+        },
+        "CustomerID": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.0
+        },
+        "CustomerDOB": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.32396594590522115,
+            "percentage_valid_date": 0.0
+        },
+        "CustGender": {
+            "data_type": "StringType()",
+            "unique_value": [
+                "F",
+                "M",
+                "T",
+                null
+            ],
+            "percentage_missing_value": 0.10490507521217052
+        },
+        "CustLocation": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.014400605779125225
+        },
+        "CustAccountBalance": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.22592738470693813,
+            "Total Negative Values": 0
+        },
+        "TransactionDate": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.0,
+            "percentage_valid_date": 0.0
+        },
+        "TransactionTime": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.0
+        },
+        "TransactionAmount (INR)": {
+            "data_type": "StringType()",
+            "percentage_missing_value": 0.0,
+            "Total Negative Values": 0
+        }
+    }
+}
