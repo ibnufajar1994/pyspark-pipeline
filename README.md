@@ -155,7 +155,7 @@ Filters the dataset to retain only relevant fields for analysis.
 ## Preparations
 **Clone the repository:**
    ```bash
-   git clone https://github.com/ibnufajar1994/data-pipeline.git
+   git clone https://github.com/ibnufajar1994/pyspark-pipeline.git
    ```
 ## Running the project  
    ```bash
