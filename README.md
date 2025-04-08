@@ -157,6 +157,33 @@ Filters the dataset to retain only relevant fields for analysis.
    ```bash
    git clone https://github.com/ibnufajar1994/pyspark-pipeline.git
    ```
+## Edit the env file on root directory and /script/.env
+   ```bash
+LOG_POSTGRES_HOST=
+LOG_POSTGRES_DB=
+LOG_POSTGRES_USER=
+LOG_POSTGRES_PASSWORD=
+LOG_POSTGRES_PORT="5437"
+
+SRC_POSTGRES_HOST=
+SRC_POSTGRES_DB=
+SRC_POSTGRES_USER=
+SRC_POSTGRES_PASSWORD=
+SRC_POSTGRES_PORT="5438"
+
+DWH_POSTGRES_HOST=
+DWH_POSTGRES_DB=
+DWH_POSTGRES_USER=
+DWH_POSTGRES_PASSWORD=
+DWH_POSTGRES_PORT="5439"
+
+PROJECT_DIRECTORY="/your/project/directory"
+
+DRIVER_PATH="org.postgresql.Driver"
+
+for .env on script/.env ==> make sure all port is 5432
+   ```
+
 ## Running the project  
    ```bash
    docker compose build --no-cache
